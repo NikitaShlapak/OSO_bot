@@ -2,7 +2,8 @@
 
 ## Для пользователей
 ### 1) Добавление новых вопросов в бота - расширение вопросно-ответного функционала бота:
-#### 1.Открыть Google таблицу https://docs.google.com/spreadsheets/d/1s3WEnxUGNOw9CzJc34ohm6F5KIPswM56ABLbihgPO7s/edit?gid=1011468039#gid=1011468039
+#### 1.Открыть Google таблицу 
+https://docs.google.com/spreadsheets/d/1s3WEnxUGNOw9CzJc34ohm6F5KIPswM56ABLbihgPO7s/edit?gid=1011468039#gid=1011468039
 #### 2.Открыть нужный лист - вашей организации
 #### 3.В первый столбец A вносить вопросы, а во второй столбец B - ответы на эти вопросы
 ## Для разработчиков
