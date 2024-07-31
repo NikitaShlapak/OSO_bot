@@ -7,13 +7,13 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from env import scopes
 from env import sample_spreadsheet_ID
+from fuzzywuzzy import process
 
 sample_range_name_of_programming_circle = "Кружок Программирования"
 sample_range_name_of_student_scientific_society = "Студенческое научное общество"
 sample_range_name_of_curators = "Кураторы ИАТЭ НИЯУ МИФИ"
 sample_range_name_of_council_of_dormitories = "Совет общежитий (СО)"
-
-def reading_google_sheets (name_of_sheet):
+def read_google_sheets (name_of_sheet):
   sample_range_name=name_of_sheet + "!A2:B50"
   connected=False
   creds = None
@@ -53,3 +53,12 @@ def reading_google_sheets (name_of_sheet):
     answer.append(row[1])
     dictionary=dict(zip(question,answer))
   return dictionary
+def understand_question(name_of_sheet,string_of_user):
+  dictionary=read_google_sheets (name_of_sheet)
+  questions = []
+  for i in dictionary:
+    questions.append(i)
+  a = process.extractOne(string_of_user, questions)
+  unswer=dictionary[a[0]]
+  return unswer
+
