@@ -61,7 +61,7 @@ def understand_question(dictionary, user_question):
     questions = list(dictionary.keys())
     appropriate_question = process.extractOne(user_question, questions)
     if appropriate_question[1] > 50:
-        unswer = dictionary[appropriate_question[0]]
+        answer = dictionary[appropriate_question[0]]
     else:
-        unswer = "Извините, мы не можем найти что-то похожее на ваш вопрос."
-    return unswer
+        answer = "Извините, мы не можем найти что-то похожее на ваш вопрос."
+    return answer
